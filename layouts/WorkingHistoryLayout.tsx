@@ -12,14 +12,14 @@ import { convertTimeToMonthYear } from 'utils/common'
 import TechStack from '@/components/techstacks'
 
 export default function WorkingHistoryLayout() {
-  const careers = allCareers.sort((a, b) => (a.timeTo < b.timeTo ? 1 : -1))
+  const careers = allCareers.sort((a, b) => (a.timeTo && b.timeTo && a.timeTo < b.timeTo ? 1 : -1))
 
   return (
     <ol className="relative border-l border-gray-200 dark:border-gray-700">
       {careers.map((career) => (
         <li className=" pl-6">
           <span className="absolute flex items-center justify-center w-10 h-10 bg-blue-100 rounded-full -left-5 ring-8 ring-gray-100 dark:ring-gray-900 dark:bg-blue-900">
-            <Link href={career.companyUrl} target="_blank">
+            <Link href={career.companyUrl ? career.companyUrl : ''} target="_blank">
               <Image
                 src={career.logo || '/static/images/link.png'}
                 alt="flowbite"
