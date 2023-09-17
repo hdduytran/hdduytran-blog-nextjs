@@ -13,7 +13,9 @@ type IconProps = {
 }
 
 const Icon = ({ kind, href, size = 8 }: IconProps) => {
-  if (kind === 'mail' && !/^mailto:\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/.test(href)) return null
+  if (kind === 'mail' && href && !/^mailto:\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{2,3})+$/.test(href)) {
+    return null
+  }
 
   const IconSvg = components[kind]
 
