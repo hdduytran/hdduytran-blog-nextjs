@@ -15,7 +15,6 @@ interface Props {
 export default function AuthorLayout({ children, content }: Props) {
   const { name, avatar, location, company, email, skype, linkedin, github, techStack, education } =
     content
-  console.log(techStack)
   return (
     <>
       <div>

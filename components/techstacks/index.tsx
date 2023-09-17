@@ -3,9 +3,7 @@ import * as iconList from './icons'
 const components = {}
 
 for (const key in iconList) {
-  if (iconList.hasOwnProperty(key)) {
-    components[key.toLowerCase()] = iconList[key]
-  }
+  components[key.toLowerCase()] = iconList[key]
 }
 
 type TechStackProps = {
@@ -21,7 +19,7 @@ const TechStack = ({ tech }: TechStackProps) => {
         {IconSvg && (
           <IconSvg className="w-5 h-5  fill-current text-gray-700 hover:text-primary-500 dark:text-gray-200 dark:hover:text-primary-400 " />
         )}
-        <span >{tech}</span>
+        <span>{tech}</span>
       </div>
     </div>
   )

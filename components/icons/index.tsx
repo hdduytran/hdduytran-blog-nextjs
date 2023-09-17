@@ -1,12 +1,9 @@
 import * as iconList from './icons'
 
-
-const components = {};
+const components = {}
 
 for (const key in iconList) {
-  if (iconList.hasOwnProperty(key)) {
-    components[key.toLowerCase()] = iconList[key];
-  }
+  components[key.toLowerCase()] = iconList[key]
 }
 
 type IconProps = {
