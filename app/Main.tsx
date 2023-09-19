@@ -23,32 +23,28 @@ export default function Home({ posts }) {
           </p>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700 max-w-none">
-          {
-            homeConfig.map((item) => (
-              <li className="py-5 px-10">
-                <Link
-                  href={item.path}
-                  className="flex  items-center   bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-6xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 "
-                >
-                  <div className="object-contain max-w-none md:h-auto w-36 p-2 ">
-                    <Icon kind={item.icon} size={200} />
-                  </div>
-                  <div className="flex flex-col justify-between p-4 leading-normal max-w-3xl bg-gray-500 bg-transparent bg-opacity-30 md:bg-opacity-100">
-                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white p-2">
-                      {item.title}
-                    </h5>
-                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 p-2 ">
-                      {item.description}
-                    </p>
-                  </div>
-                </Link>
-              </li>
-            ))
-          }
-     
+          {homeConfig.map((item) => (
+            <li className="py-5 px-10">
+              <Link
+                href={item.path}
+                className="flex  items-center   bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-6xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 "
+              >
+                <div className="object-contain max-w-none md:h-auto w-36 p-2 ">
+                  <Icon kind={item.icon} size={200} />
+                </div>
+                <div className="flex flex-col justify-between p-4 leading-normal max-w-3xl bg-gray-500 bg-transparent bg-opacity-30 md:bg-opacity-100">
+                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white p-2">
+                    {item.title}
+                  </h5>
+                  <p className="mb-3 font-normal text-gray-700 dark:text-gray-400 p-2 ">
+                    {item.description}
+                  </p>
+                </div>
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
-      
     </>
   )
 }

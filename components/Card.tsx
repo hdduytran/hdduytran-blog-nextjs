@@ -51,8 +51,10 @@ const Card = (dataCard) => (
             </span>
           </Link>
           <div className="flex space-x-1">
-            { dataCard.github && <Icon kind="github" href={dataCard.github} size={6} />}
-            {dataCard.huggingface && <Icon kind="huggingface" href={dataCard.huggingface} size={6} />}
+            {dataCard.github && <Icon kind="github" href={dataCard.github} size={6} />}
+            {dataCard.huggingface && (
+              <Icon kind="huggingface" href={dataCard.huggingface} size={6} />
+            )}
             {/* <Icon kind="huggingface" href={`mailto:`} size={6} /> */}
           </div>
         </div>
