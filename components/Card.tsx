@@ -33,7 +33,7 @@ const Card = (dataCard) => (
             {dataCard.tools && (
               <div className="flex pt-4 flex-wrap space-x-1.5">
                 {dataCard.tools?.map((tool) => {
-                  return <TechStack tech={tool} />
+                  return <TechStack tech={tool} key={tool} />
                 })}
               </div>
             )}

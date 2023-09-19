@@ -24,7 +24,7 @@ export default function Home({ posts }) {
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700 max-w-none">
           {homeConfig.map((item) => (
-            <li className="py-5 px-10">
+            <li className="py-5 px-10" key={item.title}>
               <Link
                 href={item.path}
                 className="flex  items-center   bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-6xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 "
