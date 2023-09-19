@@ -17,7 +17,7 @@ export default function WorkingHistoryLayout() {
   return (
     <ol className="relative border-l border-gray-200 dark:border-gray-700">
       {careers.map((career) => (
-        <li className=" pl-6">
+        <li className=" pl-6" key={career.company}>
           <span className="absolute flex items-center justify-center w-10 h-10 bg-blue-100 rounded-full -left-5 ring-8 ring-gray-100 dark:ring-gray-900 dark:bg-blue-900">
             <Link href={career.companyUrl ? career.companyUrl : ''} target="_blank">
               <Image
@@ -50,7 +50,7 @@ export default function WorkingHistoryLayout() {
             {career.techStack && (
               <div className="flex flex-wrap items-center space-x-1 mt-1">
                 {career.techStack.map((tech) => (
-                  <TechStack tech={tech} />
+                  <TechStack tech={tech} key={tech} />
                 ))}
               </div>
             )}
