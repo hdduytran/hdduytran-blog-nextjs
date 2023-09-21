@@ -11,7 +11,7 @@ type TechStackProps = {
 }
 
 const TechStack = ({ tech }: TechStackProps) => {
-  const IconSvg = components[tech.toLowerCase().replace(/ |\//g, '')]
+  const IconSvg = components[tech.toLowerCase().replace(/\W/g, '')]
   return (
     <div>
       {/* tech stack include icon follower by its name */}

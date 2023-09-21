@@ -3,13 +3,14 @@ const siteMetadata = {
   title: 'DD Page',
   author: 'hdduytran',
   headerTitle: 'Home',
-  description: "A place I share my knowledge and experience as a software engineer. Hope you enjoy it!",
+  description:
+    'A place I share my knowledge and experience as a software engineer. Hope you enjoy it!',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
   siteRepo: 'https://github.com/hdduytran/hdduytran-blog-nextjs',
   siteLogo: '/static/images/dd-logo.png',
-  socialBanner: '/static/images/twitter-card.png',
+  socialBanner: '/static/images/logo-banner.png',
   // mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'ducduyleo@gmail.com',
   github: 'https://github.com/hdduytran',

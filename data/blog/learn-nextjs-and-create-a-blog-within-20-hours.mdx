@@ -4,9 +4,112 @@ date: '2023-09-17'
 lastmod: '2023-09-17'
 tags: ['next-js', 'tailwind', 'guide']
 draft: false
-summary: 'I am a backend developer and I have no idea about frontend. Starting from zero, I created this blog within 20 hours. I will share my experience and hope it will help you.'
-images: ['/static/images/canada/mountains.jpg', '/static/images/canada/toronto.jpg']
+summary: 'I am a data engineer and I have no idea about frontend. Starting from zero, I created this blog within 20 hours. I will share my experience and hope it will help you.'
+images: ['public/static/images/logo-banner.png']
 # authors: ['default']
 ---
 
-# Learn Next.js From Zero and Create a Blog within 20 hours
+# Introduction 
+
+## Why I start this blog
+
+> Writing organizes and clarifies our thoughts. Writing is how we think our way into a subject and make it our own. Writing enables us to find out what we know-and what we don’t know-about whatever we’re trying to learn. - William Zinsser
+
+Few days ago, I read this quote from [How to Write a Lot](https://www.amazon.com/Writing-Learn-Write-Clearly-Subject-ebook/dp/B00BOQEBFE) and I decided to start this blog. 
+
+I will write about whatever make me grow. Something I learned, something I experienced, something I am interested in, I think it will be more related to computer science and software engineering. Hope this blog make me or mayby its readers grow as well.
+
+
+## Let talk about this project/blog
+
+When I say project, I mean a technical project and how I build this, which tech stack I used, how I choose them, how I deploy it, how I manage it, etc.
+
+Let's define the goals:
+- A blog need to be customizable, I want to bring which I thought without any limitation.
+- A blog need to be easy to use and maintain, I don't want to spend too much time on it.
+- Get knowledge from building this, I want to learn something new about frontend and web development which I have a little knowledge about it.
+
+From the goals, this is my plan:
+1. Survey current blog system, I want to know what is the current trend and what is the best practice.
+1. Choose the tech stack, choosing the best one which can help me achieve the goals.
+1. Build the blog as soon as possible and start writing regardless of how small it is. Something runable will keep me motivated, then I can improve it step by step.
+1. Deploy the blog, I want to deploy it to a server and make it public. I want to share my achievement with others.
+
+# Get started
+
+## Survey current blog system
+
+Said before, I have no idea about frontend, only a bit about client side web development. I could know how to design a backend system, how to build a data pipeline, how to deploy a service, but once again, I have no idea about frontend. So I need to survey the current blog system and find out what is the best practice.
+
+After visiting some software engineer and my friends' blog, I found most of them are using [Next.js](https://nextjs.org/) which is a React framework. For styling, there are serveral options, [Tailwind CSS](https://tailwindcss.com/) is the most popular one, and [Chakra UI](https://chakra-ui.com/) is also a good choice. For hosting, [Vercel](https://vercel.com/) is the free dynamic hosting service for Next.js, and [Github Pages](https://pages.github.com/) can be used as static hosting service. For content management, [Markdown](https://www.markdownguide.org/) is the most fimilar one for me, and [MDX](https://mdxjs.com/) is a more powerful one which can be used to write React components in Markdown.
+
+## Choose the tech stack
+
+Done the survey, I do some googling and found a "ultimate template" which combine some of the tech stack I mentioned above. I want to give a thanks to [timlrx](https://github.com/timlrx) who created [tailwind-nextjs-starter-blog](https://github.com/timlrx/tailwind-nextjs-starter-blog) template. It is a Next.js blog starter template with Tailwind CSS, MDX. I think it is a good start point for me. Additionally, this template also come with some service for SEO, analytics, and comments. I will try to use them later.
+
+And this is the tech stack I choose:
+- [Next.js](https://nextjs.org/) - React framework
+- [Tailwind CSS](https://tailwindcss.com/) - CSS framework
+- [MDX](https://mdxjs.com/) - Markdown with React components
+- [Vercel](https://vercel.com/) - Hosting service
+
+## Build the blog
+
+I will not go through the details of any tech stack, you can find the tutorial from their official website. I will only talk about what I do in a high level.
+
+### Learn basic of frontend
+
+For simple, framework or library is set of tools for quickly and easily building something. In the very first step if I jump into the framework, I will be confused. So I need to learn the basic of frontend first. I learned HTML, CSS, and JavaScript from [W3Schools](https://www.w3schools.com/) to know about its structure, style, and behavior without advanced features or complex logic which framework or library will take place. I get something like: hierarchy of HTML, box model of CSS, and DOM of JavaScript.
+
+<i> Working in software engineering, I have a knowledge about how website work, network, server, client, etc. I think it is a good start point for me. And I want to claim that I am not a frontend developer or want to be a frontend developer. I just want to build a blog for myself so I don't learn frontend in a deep level. Don't follow me if you want to be a frontend developer. </i>
+
+### Learn Next.js
+
+Okay, I think I can understand something about frontend now. Let's start to learn Next.js. I learned Next.js from [Next.js Learn](https://nextjs.org/learn/foundations/about-nextjs) which is a tutorial from Next.js official website. I know more about navigation, routing, data fetching, and API routes. I also learned how to deploy a Next.js app to Vercel.
+
+In this step, I skipped the React part, I will google when something I don’t know appears in practice.
+
+### Tailwind CSS
+
+I just visit the [Tailwind CSS](https://tailwindcss.com/) official website and take a glance at the documentation. I get how styling framework using class to style the element and something like: utility-first CSS framework, responsive design, and dark mode. I think it is enough for me to start.
+
+### MDX
+
+I am fimilar with Markdown, so I just visit the [MDX](https://mdxjs.com/) official website and take a glance at the documentation. I get how to use React components in Markdown.
+
+### Start to build
+
+Clone the [tailwind-nextjs-starter-blog](https://github.com/timlrx/tailwind-nextjs-starter-blog) template. View the source code, get the structure of the project. Run the project, get the result of the project. I think it is a good way to learn something new.
+
+Starting my customization, edit metadata which is guided in the github repo. Creating new pages, adding new components, and styling the blog which is not provided by the template. These are the things belong to me which I drawed in my mind before I start this project.
+
+<i> In this phrase, the most challenging part for me is styling. Having little knowledge about styling, I need to google a lot. Something, some elements doesn't work as I expected, I need to google and try again and again. </i>
+
+### Deploy the blog
+
+Thanks to Vercel, I can deploy the blog with one click. I just need to connect my github repo to Vercel, then Vercel will automatically checking code convention, building, and deploying every time I push my code to github. 
+
+Additionally, I can also set up the custom domain and SSL certificate in Vercel. Thanks to our government, they provide free domain for under 23 years old citizen. 
+
+# Conclusion
+
+Finally, I finished this blog within 20 hours. This is the first step and I will keep momentum to write, to do more and more. This blog is to motivate myself and to share my experience with others. 
+
+## What I learned
+
+I learned a lot from this project. I learned the basic of frontend, how to build a blog with Next.js, how to use Tailwind CSS, and how to use MDX. I also learned how to deploy a Next.js app to Vercel and how to set up the custom domain and SSL certificate.
+
+## What I will do next
+
+I will write more and more about what I learned, what I experienced, and what I am interested in. I will also upload some projects I worked on, also my future projects. Additionally, I will also improve this blog, add some features, and make it more beautiful when I have time.
+
+Thanks for reading, hope you enjoy it. This is the [source code](https://github.com/hdduytran/hdduytran-blog-nextjs) of this blog. Feel free to fork it and use it as your blog.
+
+# References
+
+- [How to Write a Lot](https://www.amazon.com/Writing-Learn-Write-Clearly-Subject-ebook/dp/B00BOQEBFE)
+- [W3Schools](https://www.w3schools.com/)
+- [Next.js Learn](https://nextjs.org/learn/foundations/about-nextjs)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vercel](https://vercel.com/)
+- [tailwind-nextjs-starter-blog](https://github.com/timlrx/tailwind-nextjs-starter-blog)

@@ -50,11 +50,12 @@ const Card = (dataCard) => (
               Learn more &rarr;
             </span>
           </Link>
-          <div className="flex space-x-1">
+          <div className="flex space-x-2">
             {dataCard.github && <Icon kind="github" href={dataCard.github} size={6} />}
             {dataCard.huggingface && (
               <Icon kind="huggingface" href={dataCard.huggingface} size={6} />
             )}
+            {dataCard.openlink && <Icon kind="openlink" href={dataCard.openlink} size={6} />}
             {/* <Icon kind="huggingface" href={`mailto:`} size={6} /> */}
           </div>
         </div>

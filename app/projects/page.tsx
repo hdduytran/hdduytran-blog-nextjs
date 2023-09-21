@@ -31,8 +31,8 @@ export default function Projects() {
                 imgSrc={d.imgSrc}
                 href={d.href}
                 tools={d.tools}
+                openlink={d.openlink}
                 github={d.github}
-                huggingface={d.huggingface}
               />
             ))}
           </div>

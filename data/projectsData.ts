@@ -1,33 +1,12 @@
 const projectsData = [
   {
-    title: 'A Search Engine',
-    description: `What if you could look up any information in the world? Webpages, images, videos
-    and more. Google has many features to help you find exactly what you're looking
-    for.`,
-    imgSrc: '/static/images/google.png',
-    href: 'https://www.google.com',
-    tools: ['Python', "Streamlit", "OpenCV"],
-    github: 'https://www.google.com',
-    huggingface: 'https://www.google.com',
-  },
-  {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/the-time-machine',
-    tools: ['Python', 'MongoDB'],
-    github: 'https://www.google.com',
-  },
-  {
-    title: 'The Time Machine',
-    description: `Imagine being able to travel back in time or to the future. Simple turn the knob
-    to the desired date and press "Go". No more worrying about lost keys or
-    forgotten headphones with this simple yet affordable solution.`,
-    imgSrc: '/static/images/time-machine.jpg',
-    href: '/blog/the-time-machine',
-    tools: ['Python', 'MongoDB'],
+    title: 'Personal Blog',
+    description: `This is my personal blog where I write about my experiences and thoughts on various topics.`,
+    imgSrc: '/static/images/logo-banner.png',
+    href: '/blog/learn-nextjs-and-create-a-blog-within-20-hours',
+    tools: ['Next.js', 'Tailwind CSS'],
+    github: 'https://github.com/hdduytran/hdduytran-blog-nextjs',
+    openlink: 'https://duytran.id.vn',
   },
 ]
 
