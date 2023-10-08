@@ -3,7 +3,7 @@ import Link from './Link'
 import Icon from '@/components/icons'
 import TechStack from '@/components/techstacks'
 
-const Card = (dataCard) => (
+const ProjectCard = (dataCard) => (
   <div className="md p-4 md:w-1/2" style={{ maxWidth: '544px' }}>
     <div
       className="flex h-full flex-col overflow-hidden rounded-md border
@@ -64,4 +64,4 @@ const Card = (dataCard) => (
   </div>
 )
 
-export default Card
+export default ProjectCard

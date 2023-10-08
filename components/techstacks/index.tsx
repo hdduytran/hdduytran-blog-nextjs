@@ -8,6 +8,7 @@ for (const key in iconList) {
 
 type TechStackProps = {
   tech: string
+  className?: string
 }
 
 const TechStack = ({ tech }: TechStackProps) => {
@@ -25,4 +26,12 @@ const TechStack = ({ tech }: TechStackProps) => {
   )
 }
 
+const TechStackIcon = ({ tech, className }: TechStackProps) => {
+  const IconSvg = components[tech.toLowerCase().replace(/\W/g, '')]
+  if (!IconSvg) return <div>Missing Icon for {tech}</div>
+
+  return <IconSvg className={className || 'h-16 w-16 lg:h-14 lg:w-14 xl:h-20 xl:w-20'} />
+}
+
 export default TechStack
+export { TechStackIcon }

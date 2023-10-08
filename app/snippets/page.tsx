@@ -1,11 +1,9 @@
 import { genPageMetadata } from 'app/seo'
+import { allSnippets } from 'contentlayer/generated'
+import SnippetLayout from '@/layouts/SnippetLayout'
 
 export const metadata = genPageMetadata({ title: 'Snippets' })
 
 export default function Snippets() {
-  return (
-    <>
-      <h1>Not Implement Yet</h1>
-    </>
-  )
+  return <SnippetLayout snippets={allSnippets} description="Some snippets that I find useful" />
 }

@@ -173,9 +173,40 @@ export const Career = defineDocumentType(() => ({
   computedFields,
 }))
 
+export const Snippet = defineDocumentType(() => ({
+  name: 'Snippet',
+  filePathPattern: 'snippets/**/*.mdx',
+  contentType: 'mdx',
+  fields: {
+    heading: { type: 'string', required: true },
+    title: { type: 'string', required: true },
+    date: { type: 'date', required: true },
+    lastmod: { type: 'date' },
+    stack: { type: 'string', required: true },
+    draft: { type: 'boolean' },
+    summary: { type: 'string' },
+    tags: { type: 'list', of: { type: 'string' }, default: [] },
+  },
+  computedFields: {
+    ...computedFields,
+    structuredData: {
+      type: 'json',
+      resolve: (doc) => ({
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        headline: doc.title,
+        datePublished: doc.date,
+        dateModified: doc.lastmod || doc.date,
+        description: doc.summary,
+        url: `${siteMetadata.siteUrl}/${doc._raw.flattenedPath}`,
+        // author: doc.authors,
+      }),
+    },
+  },}))
+
 export default makeSource({
   contentDirPath: 'data',
-  documentTypes: [Blog, Authors, Career],
+  documentTypes: [Blog, Authors, Career, Snippet],
   mdx: {
     cwd: process.cwd(),
     remarkPlugins: [

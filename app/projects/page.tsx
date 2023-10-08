@@ -1,5 +1,5 @@
 import projectsData from '@/data/projectsData'
-import Card from '@/components/Card'
+import ProjectCard from '@/components/ProjectCard'
 import { genPageMetadata } from 'app/seo'
 
 import homeConfig from '@/data/homeConfig'
@@ -24,7 +24,7 @@ export default function Projects() {
         <div className="container py-12">
           <div className="-m-4 flex flex-wrap">
             {projectsData.map((d) => (
-              <Card
+              <ProjectCard
                 key={d.title}
                 title={d.title}
                 description={d.description}

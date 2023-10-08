@@ -13,7 +13,7 @@ const Header = () => {
     <header className="flex items-center justify-between py-10">
       <div>
         <Link href="/" aria-label={siteMetadata.headerTitle}>
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between hover:scale-105">
             <div className="mr-3">
               <Image
                 src={siteMetadata.siteLogo}
@@ -40,7 +40,7 @@ const Header = () => {
             <Link
               key={link.title}
               href={link.href}
-              className="hidden sm:block font-medium text-gray-900 dark:text-gray-100"
+              className="hidden sm:block font-medium text-gray-900 dark:text-gray-100 hover:underline"
             >
               {link.title}
             </Link>
